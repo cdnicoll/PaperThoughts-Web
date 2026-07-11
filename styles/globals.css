@@ -510,7 +510,7 @@ html[data-theme='light'] .theme-toggle__moon {
 
 .features {
   width: 100%;
-  max-width: 640px;
+  max-width: 780px;
   margin-top: 2.5rem;
   border-collapse: collapse;
 }
@@ -553,16 +553,17 @@ html[data-theme='light'] .theme-toggle__moon {
   font-size: 0.875rem;
 }
 
-.features__check-col {
-  text-align: right;
+.features thead th.features__check-col {
+  text-align: center;
+  width: 7rem;
 }
 
-.features__check {
-  text-align: right;
+.features td.features__check {
+  text-align: center;
   vertical-align: middle;
   color: var(--color-brand);
   font-weight: 700;
-  width: 4.5rem;
+  width: 7rem;
 }
 
 .features__check--text {
@@ -570,6 +571,10 @@ html[data-theme='light'] .theme-toggle__moon {
   font-weight: 500;
   font-size: 0.875rem;
   white-space: nowrap;
+}
+
+.features td:first-child {
+  padding-right: 2rem;
 }
 
 .centered {
