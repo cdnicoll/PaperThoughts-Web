@@ -180,27 +180,27 @@ export const faq = {
   items: [
     {
       q: 'Do I need an Apple Pencil?',
-      a: 'Yes. It is built for it. Typed entries work without one.',
+      a: 'Yes. Paper Thoughts is built around the Pencil, so the page always draws and your finger never leaves a mark. If you set it down, typed entries still work, and the iPhone companion lets you read and jot from anywhere.',
     },
     {
       q: 'What does it cost?',
-      a: 'Nothing to start. Every feature is free for three journals with five entries each. Premium removes the limits, from $3.99 a month or $59.99 once.',
+      a: 'Nothing to start. Every feature is free, up to three journals with five entries each. Premium removes the limits for $3.99 a month, $24.99 a year, or $59.99 once. Either way your writing is never locked: you can read and export everything, even if Premium lapses.',
     },
     {
       q: 'What about iPhone?',
-      a: 'Read everything and jot typed thoughts. Ink lives on iPad, on purpose.',
+      a: 'There is an iPhone companion. Read your whole journal, pinch into your ink, and capture a typed thought while you are out. Writing with the Pencil stays on iPad on purpose, because that is where handwriting feels right.',
     },
     {
       q: 'Where is my data?',
-      a: 'In your iCloud. We have no servers and no accounts.',
+      a: 'In your own iCloud, synced across your devices. We have no servers and no accounts, so we never see a word you write. Lock the app with Face ID, and it all keeps working offline.',
     },
     {
       q: 'Can I get my writing out?',
-      a: 'PDF or portable journal files, anytime.',
+      a: 'Anytime. Export a single entry or a whole journal as a PDF, or as a portable journal file you can keep or move elsewhere. It is your writing, so it never gets trapped in the app.',
     },
     {
       q: 'Is there handwriting search?',
-      a: 'Not yet. It is coming when iPadOS supports it properly.',
+      a: 'Not yet. You can already filter by tag and browse by journal, but searching the handwriting itself is coming once iPadOS supports it properly, rather than shipping something that only half works.',
     },
   ],
 };
