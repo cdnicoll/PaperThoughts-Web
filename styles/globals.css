@@ -720,6 +720,16 @@ html[data-theme='light'] .theme-toggle__moon {
   margin-top: 3rem;
 }
 
+/* Honeypot: kept in the layout but off-screen and out of the tab order,
+   so bots fill it and people never see it (see FeedbackForm #7). */
+.feedback__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .feedback h2 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
