@@ -1,10 +1,25 @@
 rules_version = '2';
 
-// Deny everything by default. The feedback collection's create-only rules
-// land with the feedback-form work (web issue #4) — until then nothing in
-// Firestore is client-reachable.
+// Deny everything by default. The only client-reachable path is creating a
+// feedback document, and even that is tightly validated: exact field set,
+// types, sizes, a server timestamp, and no reads/updates/deletes from
+// clients. Submissions are read from the Firebase console or an admin script.
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    match /feedback/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(['message', 'email', 'source', 'createdAt'])
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0
+        && request.resource.data.message.size() <= 5000
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 320
+        && request.resource.data.source in ['home', 'support']
+        && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

@@ -205,6 +205,55 @@ export const faq = {
   ],
 };
 
+// Extra questions shown only on the fuller /support page, on top of the
+// main-page six. Facts are accurate to shipped features (#92 limits,
+// iCloud sync, Recently Deleted, move between journals, App Lock); UI
+// steps stay general rather than inventing exact tap paths.
+export const supportExtras = [
+  {
+    q: 'What happens when I reach the free limit?',
+    a: 'Nothing you have written is touched. You keep full read and export access to everything, and only creating new journals or entries beyond the free limit asks you to go Premium.',
+  },
+  {
+    q: 'Can I use it on more than one device?',
+    a: 'Yes. Your journals sync through your own iCloud, so they appear on every iPad and iPhone signed in to the same Apple account.',
+  },
+  {
+    q: 'How do I get back an entry I deleted?',
+    a: 'Deleted entries wait in Recently Deleted for thirty days. Open it and restore anything before it clears.',
+  },
+  {
+    q: 'How do I move an entry to another journal?',
+    a: 'Open the entry details and pick a different journal. Its tags move with it.',
+  },
+  {
+    q: 'How do I lock the journal?',
+    a: 'Turn on Face ID or Touch ID in Settings. The journal locks when you leave and asks to unlock when you return.',
+  },
+];
+
+// The main-page invitation. Indie authenticity (01 §1): the maker reads
+// everything. Warm, not a popup, not complicated.
+export const feedbackInvite = {
+  heading: 'Tell us what you want next',
+  sub: 'Paper Thoughts is made by one person who reads every note. A feature you wish it had, a rough edge, or just hello.',
+};
+
+// Form mechanics, shared by both placements. Headings live with each caller.
+export const feedbackForm = {
+  supportHeading: 'Send us a note',
+  supportSub: 'Feedback, a feature you wish existed, or a question. We read everything.',
+  messageLabel: 'Your note',
+  messagePlaceholder: 'What is on your mind?',
+  emailLabel: 'Email',
+  emailHint: 'Optional, only if you would like a reply.',
+  emailPlaceholder: 'you@example.com',
+  submit: 'Send',
+  submitting: 'Sending',
+  success: 'Thanks. We have it, and we read everything.',
+  error: 'That did not send. Please try again, or email hello@paperthoughts.app.',
+};
+
 export const footer = {
   note: 'No cookies. Obviously.',
   privacyLink: 'Privacy',

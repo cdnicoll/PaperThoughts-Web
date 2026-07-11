@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import {
   Faq,
   FeatureTable,
+  FeedbackInvite,
   PaperStyles,
   Pencil,
   PhotosPlaces,
@@ -24,6 +25,7 @@ export default function Home() {
         <Pricing />
         <FeatureTable />
         <Faq />
+        <FeedbackInvite />
       </main>
       <Footer />
     </>

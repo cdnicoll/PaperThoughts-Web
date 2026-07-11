@@ -1,4 +1,15 @@
-import { faq, features, paper, pencil, photos, pricing, privacy } from '@/content/copy';
+import {
+  faq,
+  feedbackInvite,
+  features,
+  paper,
+  pencil,
+  photos,
+  pricing,
+  privacy,
+} from '@/content/copy';
+import { FaqList } from './FaqList';
+import { FeedbackForm } from './FeedbackForm';
 
 // The 04 §2 skeleton, sections 2 through 8. Cream sections alternate
 // canvas and sunken so the middle of the page reads as sheets of paper
@@ -195,14 +206,21 @@ export function Faq() {
     <section className="section">
       <div className="section__inner section__inner--narrow" data-reveal>
         <h2>{faq.heading}</h2>
-        <dl className="faq">
-          {faq.items.map((item) => (
-            <div key={item.q}>
-              <dt>{item.q}</dt>
-              <dd>{item.a}</dd>
-            </div>
-          ))}
-        </dl>
+        <FaqList items={faq.items} />
+      </div>
+    </section>
+  );
+}
+
+export function FeedbackInvite() {
+  return (
+    <section className="section section--sunken">
+      <div className="section__inner section__inner--narrow" data-reveal>
+        <FeedbackForm
+          source="home"
+          heading={feedbackInvite.heading}
+          sub={feedbackInvite.sub}
+        />
       </div>
     </section>
   );

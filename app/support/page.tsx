@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
-import { faq, site } from '@/content/copy';
+import { faq, feedbackForm, site, supportExtras } from '@/content/copy';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { FaqList } from '@/components/FaqList';
+import { FeedbackForm } from '@/components/FeedbackForm';
 
 export const metadata: Metadata = {
   title: `Support — ${site.name}`,
@@ -20,12 +22,12 @@ export default function Support() {
         Write to <a href={`mailto:${site.email}`}>{site.email}</a> and a human
         (the one who made the app) will reply.
       </p>
-      {faq.items.map((item) => (
-        <div key={item.q}>
-          <h2>{item.q}</h2>
-          <p>{item.a}</p>
-        </div>
-      ))}
+      <FaqList items={[...faq.items, ...supportExtras]} />
+      <FeedbackForm
+        source="support"
+        heading={feedbackForm.supportHeading}
+        sub={feedbackForm.supportSub}
+      />
     </main>
   );
 }

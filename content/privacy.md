@@ -22,6 +22,8 @@ Premium subscriptions and the lifetime purchase are handled by Apple through you
 
 No cookies, no analytics, no tracking. It is a static page.
 
+If you send feedback through the form on the support page, we store the message you write, and your email address if you choose to add one, so we can read it and reply. That is the only information this site ever collects, and only when you choose to send it. It is kept in a private database in Canada and used for nothing else.
+
 ## Changes
 
 If this policy ever changes, the change will be dated here. This version: July 11, 2026.
