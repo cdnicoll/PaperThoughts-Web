@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="sage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E9A72"></stop>
+      <stop offset="1" stop-color="#235841"></stop>
+    </linearGradient>
+    <clipPath id="tile">
+      <rect width="1024" height="1024" rx="230"></rect>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#sage)"></rect>
+    <path d="M 416 0 L 608 0 L 608 344 C 608 410, 536 518, 518 548 L 512 560 L 506 548 C 488 518, 416 410, 416 344 Z" fill="#FAF7F2"></path>
+    
+    <path d="M 548 0 L 608 0 L 608 344 C 608 410, 536 518, 518 548 L 512 560 C 534 496, 548 410, 548 344 Z" fill="#D8D2C8"></path>
+    <g stroke-width="54" stroke-linecap="round">
+      <line x1="156" y1="656" x2="868" y2="656" stroke="#FAF7F2"></line>
+      <line x1="156" y1="760" x2="868" y2="760" stroke="#EFA02E"></line>
+      <line x1="156" y1="864" x2="868" y2="864" stroke="#FAF7F2"></line>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,671 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================
+   Scroll reveals — a fade and a short rise, once, per brand
+   motion rules (05 §6): ease-out, no bounce, no loops. Elements
+   are hidden only when the tiny observer script has run
+   (html.js-reveal), so no-JS visitors see everything.
+   ============================================================ */
+html.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 600ms var(--ease-out);
+}
+
+html.js-reveal [data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Section rhythm — page turns: alternating grounds, real pauses
+   ============================================================ */
+.section {
+  padding: clamp(5rem, 12vh, 8rem) 1.5rem;
+}
+
+.section--sunken {
+  background: var(--color-sunken);
+}
+
+.section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section__inner--narrow {
+  max-width: 600px;
+}
+
+.section h2 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  margin-bottom: 1rem;
+  max-width: 26rem;
+}
+
+.section p {
+  max-width: 32rem;
+}
+
+.section .muted {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   Theme toggle — a quiet sun/moon in the corner
+   ============================================================ */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--color-rule);
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.chrome .theme-toggle {
+  border-color: var(--chrome-border);
+  color: var(--on-chrome-muted);
+}
+
+/* Default (light active): offer the moon */
+.theme-toggle__sun {
+  display: none;
+}
+
+.theme-toggle__moon {
+  display: block;
+}
+
+/* OS dark without an explicit light choice: offer the sun */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme='light']) .theme-toggle__sun {
+    display: block;
+  }
+
+  html:not([data-theme='light']) .theme-toggle__moon {
+    display: none;
+  }
+}
+
+/* Explicit choices win either way */
+html[data-theme='dark'] .theme-toggle__sun {
+  display: block;
+}
+
+html[data-theme='dark'] .theme-toggle__moon {
+  display: none;
+}
+
+html[data-theme='light'] .theme-toggle__sun {
+  display: none;
+}
+
+html[data-theme='light'] .theme-toggle__moon {
+  display: block;
+}
+
+.hero .theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+/* ============================================================
+   Chrome surfaces — hero and footer on the lamp-lit desk
+   ============================================================ */
+.chrome {
+  background: var(--gradient-chrome);
+  color: var(--on-chrome);
+}
+
+.chrome a {
+  color: var(--on-chrome-muted);
+}
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  padding: clamp(4rem, 10vh, 6.5rem) 1.5rem clamp(5rem, 12vh, 8rem);
+}
+
+.hero__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 880px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 26rem) minmax(0, 32rem);
+    gap: 5rem;
+    justify-content: center;
+    justify-items: start;
+  }
+}
+
+.hero__text {
+  text-align: center;
+}
+
+@media (min-width: 880px) {
+  .hero__text {
+    text-align: left;
+  }
+}
+
+.hero__brandmark {
+  display: inline-flex;
+  margin-bottom: 3.5rem;
+}
+
+.hero__brandmark img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3rem);
+  color: var(--on-chrome);
+  margin-bottom: 1.25rem;
+}
+
+.hero__sub {
+  color: var(--on-chrome-muted);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 24rem;
+  margin: 0 auto 2.5rem;
+}
+
+@media (min-width: 880px) {
+  .hero__sub {
+    margin: 0 0 2.5rem;
+  }
+}
+
+/* The device: a flat, minimal iPad frame on the desk — bezel and
+   corner radii only, no 3D render. Oversized on purpose; it hangs
+   past the fold at load. (Scroll parallax was tried 2026-07-10 and
+   cut — it read as lag, not depth. Keep the hero still.) */
+.hero__device {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+}
+
+.ipad {
+  position: relative; /* anchors the ::before camera dot */
+  background: #101312;
+  border-radius: 9.5% / 7.1%; /* iPad corner geometry, scales with size */
+  padding: 5.5%;
+  box-shadow:
+    var(--shadow-sheet),
+    inset 0 0 0 2px rgba(246, 241, 231, 0.14);
+}
+
+.ipad img {
+  border-radius: 8px;
+}
+
+/* Front camera: a quiet dot in the bezel */
+.ipad::before {
+  content: '';
+  position: absolute;
+  top: 2.9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(246, 241, 231, 0.18);
+}
+
+/* iPhone variant: thinner bezel, deeper corners, island pill */
+.iphone {
+  position: relative;
+  background: #101312;
+  border-radius: 14.5% / 6.7%;
+  padding: 4.5%;
+  box-shadow:
+    var(--shadow-sheet),
+    inset 0 0 0 2px rgba(246, 241, 231, 0.14);
+}
+
+.iphone img {
+  border-radius: 10px;
+}
+
+.iphone::before {
+  content: '';
+  position: absolute;
+  top: 2.6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22%;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(246, 241, 231, 0.14);
+}
+
+/* --- Gallery band: three devices back on the desk --- */
+.gallery {
+  padding: clamp(5rem, 12vh, 7rem) 1.5rem;
+}
+
+/* Static grid — every shot fully visible, nothing to swipe */
+.gallery__row {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem 3rem;
+  justify-items: center;
+}
+
+@media (min-width: 720px) {
+  .gallery__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallery__shot {
+  width: 100%;
+  max-width: 400px;
+}
+
+.gallery__shot figcaption {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: var(--on-chrome-muted);
+  font-size: 0.9rem;
+}
+
+/* --- CTA: the hero's one lamp --- */
+.cta--coming-soon {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.0625rem;
+  color: var(--accent-on-chrome);
+}
+
+.cta--badge {
+  display: inline-block;
+  background: var(--accent-on-chrome);
+  color: #1E1B13;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8125rem 1.625rem;
+  border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   Content sections
+   ============================================================ */
+
+/* Split rows: text sized to be read, image sized to the text */
+.split {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 880px) {
+  .split {
+    grid-template-columns: minmax(0, 24rem) minmax(0, 1fr);
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  .split--flip > :first-child {
+    order: 2;
+  }
+}
+
+.split__media {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Detail crops sit on a mat, like mounted prints */
+.split__media img {
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-rule);
+  background: var(--color-raised);
+  padding: 10px;
+}
+
+.split__media--small {
+  max-width: 280px;
+}
+
+/* --- Rotator: two slides crossfading in one frame, dots below --- */
+.rotator {
+  position: relative;
+}
+
+.rotator__slide {
+  opacity: 0;
+  transition: opacity 700ms var(--ease-out);
+}
+
+.rotator__slide.is-active {
+  opacity: 1;
+}
+
+.rotator__slide + .rotator__slide {
+  position: absolute;
+  inset: 0;
+}
+
+.rotator__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.rotator__dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--color-muted);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rotator__dots button.is-active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotator__slide {
+    transition: none;
+  }
+}
+
+/* --- Paper swatches: four papers, one quiet row --- */
+.paper-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 3.5rem auto 0;
+  max-width: 880px;
+}
+
+@media (min-width: 720px) {
+  .paper-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.paper-row figure img {
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-rule);
+}
+
+.paper-row figcaption {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+/* --- Privacy: text on paper, visual silence --- */
+.privacy-proof {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.25rem;
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+}
+
+/* --- Feature table: the full list, quiet rows, sage checks --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.features {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 2.5rem;
+  border-collapse: collapse;
+}
+
+.features th,
+.features td {
+  text-align: left;
+  padding: 0.875rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+.features thead th {
+  border-top: none;
+  padding-bottom: 0.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.features__group th {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  padding-top: 2rem;
+}
+
+.features td strong {
+  display: block;
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.features td span {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.features__check-col {
+  text-align: right;
+}
+
+.features__check {
+  text-align: right;
+  vertical-align: middle;
+  color: var(--color-brand);
+  font-weight: 700;
+  width: 4.5rem;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* A framed device, centered on its own line */
+.journals-device {
+  max-width: 400px;
+  margin: 2.5rem auto 0;
+}
+
+.lookback {
+  max-width: 640px;
+  margin: 4rem auto 0;
+}
+
+.lookback img {
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-rule);
+  background: var(--color-raised);
+  padding: 8px;
+}
+
+/* --- FAQ --- */
+.faq {
+  margin-top: 2.5rem;
+}
+
+.faq > div {
+  border-top: 1px solid var(--color-rule);
+  padding: 1.5rem 0;
+}
+
+.faq dt {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--color-ink);
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+}
+
+.faq dd {
+  color: var(--color-body);
+  max-width: 30rem;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  padding: clamp(4rem, 10vh, 6rem) 1.5rem;
+  text-align: center;
+}
+
+.footer__links {
+  margin-top: 2.25rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  font-size: 0.9rem;
+}
+
+.footer__note {
+  margin-top: 2.25rem;
+  color: var(--on-chrome-muted);
+  font-size: 0.8125rem;
+}
+
+/* ============================================================
+   Utility pages (privacy, support): plain cream pages
+   ============================================================ */
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.page h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.page p {
+  margin-bottom: 1rem;
+}
+
+.page__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.page__back {
+  display: inline-block;
+  font-size: 0.9rem;
+}

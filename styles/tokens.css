@@ -1,0 +1,82 @@
+/* ============================================================
+   Paper Thoughts web tokens.
+   Values are copied from brand/tokens/colors.css (Ink & Glow,
+   C2 Frame, 2026-07-10) and the iOS app's dark colorsets, which
+   are the dark-mode reference implementation. The brand repo is
+   the single source of truth: no hexes anywhere but this file.
+   ============================================================ */
+:root {
+  /* --- Chrome: the lamp-lit desk. Same in both schemes. --- */
+  --chrome-ground: #14211B;
+  --chrome-raised: #223A2F;
+  --chrome-border: #2A473A;
+  --on-chrome: #F6F1E7;
+  --on-chrome-muted: #9DBCA9;
+  --accent-on-chrome: #FFB042;
+  --gradient-chrome: linear-gradient(155deg, #14211B 0%, #1B2D25 70%, #223A2F 100%);
+
+  /* --- Content surfaces and ink (light) --- */
+  --color-canvas: #FAF7F2;   /* paper-100: the page, never white */
+  --color-sunken: #F2EDE4;   /* paper-200: alternate sections */
+  --color-raised: #FFFEFB;   /* paper-50: mats, raised paper */
+  --color-ink: #1E1B13;      /* paper-900: headlines */
+  --color-body: #3A352D;     /* paper-800: body copy */
+  --color-muted: #8A8172;    /* paper-600: captions, meta */
+  --color-rule: #E7DFD2;     /* paper-300: hairlines */
+  --color-brand: #2E6B4F;    /* sage-600: buttons on cream */
+  --color-brand-hover: #235841; /* sage-700 */
+  --color-link: #235841;     /* sage-700 */
+  --color-accent: #EFA02E;   /* amber-400: rules and fills only, never text */
+
+  /* --- Type: system stacks mirror the app (05 §2) --- */
+  --font-serif: ui-serif, "New York", Georgia, serif;
+  --font-sans: ui-sans-serif, -apple-system, "SF Pro Text", system-ui, sans-serif;
+
+  /* --- Motion (brand radius.css): calm, ease-out, no bounce --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-slow: 320ms;
+
+  /* --- Shape and shadow (brand radius.css; warm ink, never gray) --- */
+  --radius-xs: 4px;
+  --radius-md: 12px;
+  --shadow-sheet: 0 12px 32px rgba(0, 0, 0, 0.35), 0 4px 10px rgba(0, 0, 0, 0.25); /* lit sheet on chrome */
+  --shadow-card: 0 4px 12px rgba(30, 27, 19, 0.13), 0 2px 4px rgba(30, 27, 19, 0.08);
+}
+
+/* Dark: the chrome ground extended (05 §5). Values from the app's
+   dark colorsets: AppBackground, CanvasBackground, TextPrimary,
+   TextSecondary, Accent, AccentWarm.
+   Two triggers, same values: the OS preference (unless the user
+   picked light with the toggle), or an explicit data-theme="dark".
+   Keep both blocks in sync. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-canvas: #14211B;
+    --color-sunken: #232019;
+    --color-raised: #2B2820;
+    --color-ink: #F2EDE4;
+    --color-body: #E7DFD2;
+    --color-muted: #B8AF9F;
+    --color-rule: #3A352D;
+    --color-brand: #7DB597;
+    --color-brand-hover: #A9CFBA;
+    --color-link: #7DB597;
+    --color-accent: #FFB042;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-canvas: #14211B;
+  --color-sunken: #232019;
+  --color-raised: #2B2820;
+  --color-ink: #F2EDE4;
+  --color-body: #E7DFD2;
+  --color-muted: #B8AF9F;
+  --color-rule: #3A352D;
+  --color-brand: #7DB597;
+  --color-brand-hover: #A9CFBA;
+  --color-link: #7DB597;
+  --color-accent: #FFB042;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
