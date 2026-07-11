@@ -1,11 +1,15 @@
 import type { Metadata, Viewport } from 'next';
 import { site } from '@/content/copy';
+import { isLive } from '@/content/config';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   icons: { icon: '/icon-tile.svg' },
+  // Keep the pre-launch site out of search until the App Store flip.
+  // Flips to indexable automatically when appStoreUrl is set (isLive).
+  robots: isLive ? undefined : { index: false, follow: false },
   // TODO Phase 3: openGraph image designed from the hero sheet (05 §7)
 };
 

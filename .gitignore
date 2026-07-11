@@ -5,3 +5,10 @@ out/
 .DS_Store
 next-env.d.ts
 *.tsbuildinfo
+
+# Firebase
+.firebase/
+firebase-debug.log
+# service-account / admin keys must never be committed
+*serviceAccount*.json
+.firebaserc.local
