@@ -1,0 +1,35 @@
+name: Deploy to Firebase Hosting
+
+# Every push to main builds the static export and deploys it to the live
+# channel. Auth is a dedicated service account (github-deployer, Firebase
+# Hosting Admin only) whose key lives solely in the encrypted
+# FIREBASE_SERVICE_ACCOUNT_PAPERTHOUGHTS_APP secret — never in the repo.
+on:
+  push:
+    branches: [main]
+
+# Let one deploy finish (or be superseded) before the next starts.
+concurrency:
+  group: firebase-hosting-live
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PAPERTHOUGHTS_APP }}
+          projectId: paperthoughts-app
+          channelId: live
