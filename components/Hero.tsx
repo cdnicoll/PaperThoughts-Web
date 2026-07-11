@@ -10,7 +10,7 @@ export function Hero() {
         <div className="hero__text" data-reveal>
           {/* The headline is the wordmark (04 §2): icon glyph only up top */}
           <div className="hero__brandmark">
-            <img src="/icon-tile.svg" alt={site.name} width={34} height={34} />
+            <img src="/icon-tile.svg" alt={site.name} width={52} height={52} />
           </div>
           <h1>{hero.headline}</h1>
           <p className="hero__sub">{hero.sub}</p>
