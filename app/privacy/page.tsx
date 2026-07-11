@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import fs from 'node:fs';
 import path from 'node:path';
 import { site } from '@/content/copy';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
   title: `Privacy — ${site.name}`,
@@ -65,12 +65,7 @@ export default function Privacy() {
   );
   return (
     <main className="page">
-      <div className="page__top">
-        <a className="page__back" href="/">
-          ← {site.name}
-        </a>
-        <ThemeToggle />
-      </div>
+      <Nav brand />
       {renderBlocks(markdown)}
     </main>
   );

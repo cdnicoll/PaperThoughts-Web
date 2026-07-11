@@ -169,10 +169,59 @@ html[data-theme='light'] .theme-toggle__moon {
   display: block;
 }
 
-.hero .theme-toggle {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+/* --- Quiet nav: three links + toggle, right-aligned; optional brand --- */
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  padding-bottom: clamp(2.25rem, 5vh, 3.25rem);
+}
+
+.nav a {
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: var(--color-muted);
+}
+
+.nav a:hover {
+  color: var(--color-ink);
+}
+
+/* On the chrome hero, links read on the dark ground */
+.chrome .nav a {
+  color: var(--on-chrome-muted);
+}
+
+.chrome .nav a:hover {
+  color: var(--on-chrome);
+}
+
+/* Brand (utility pages): icon + wordmark, pushed left, links home */
+.nav__brand {
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__brand img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.nav__brand span {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--color-ink);
+}
+
+.chrome .nav__brand span {
+  color: var(--on-chrome);
 }
 
 /* ============================================================
@@ -190,7 +239,7 @@ html[data-theme='light'] .theme-toggle__moon {
 /* --- Hero --- */
 .hero {
   position: relative;
-  padding: clamp(4rem, 10vh, 6.5rem) 1.5rem clamp(5rem, 12vh, 8rem);
+  padding: 1.75rem 1.5rem clamp(5rem, 12vh, 8rem);
 }
 
 .hero__inner {
@@ -686,7 +735,7 @@ html[data-theme='light'] .theme-toggle__moon {
 .page {
   max-width: 600px;
   margin: 0 auto;
-  padding: 4rem 1.5rem 6rem;
+  padding: 1.75rem 1.5rem 6rem;
 }
 
 .page h1 {

@@ -14,6 +14,14 @@ export const site = {
   email: 'hello@paperthoughts.app',
 };
 
+// Quiet hero nav (web issue #3). Exactly three links — matches the
+// "three quiet links at most" rule in planning 04 §2.
+export const nav = {
+  features: 'Features',
+  roadmap: 'Roadmap',
+  support: 'Support',
+};
+
 export const hero = {
   headline: 'Paper Thoughts.',
   sub: 'A handwriting journal for iPad and Apple Pencil. Your ink, your photos, your places, in your iCloud and nowhere else.',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { faq, feedbackForm, site, supportExtras } from '@/content/copy';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Nav } from '@/components/Nav';
 import { FaqList } from '@/components/FaqList';
 import { FeedbackForm } from '@/components/FeedbackForm';
 
@@ -11,12 +11,7 @@ export const metadata: Metadata = {
 export default function Support() {
   return (
     <main className="page">
-      <div className="page__top">
-        <a className="page__back" href="/">
-          ← {site.name}
-        </a>
-        <ThemeToggle />
-      </div>
+      <Nav brand />
       <h1>Support</h1>
       <p>
         Write to <a href={`mailto:${site.email}`}>{site.email}</a> and a human

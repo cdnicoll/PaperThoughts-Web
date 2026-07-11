@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { roadmap, site } from '@/content/copy';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
   title: `Roadmap — ${site.name}`,
@@ -9,12 +9,7 @@ export const metadata: Metadata = {
 export default function Roadmap() {
   return (
     <main className="page">
-      <div className="page__top">
-        <a className="page__back" href="/">
-          ← {site.name}
-        </a>
-        <ThemeToggle />
-      </div>
+      <Nav brand />
       <h1>{roadmap.heading}</h1>
       <p>{roadmap.intro}</p>
 

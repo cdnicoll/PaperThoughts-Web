@@ -1,11 +1,11 @@
 import { hero, site } from '@/content/copy';
 import { Cta } from './Cta';
-import { ThemeToggle } from './ThemeToggle';
+import { Nav } from './Nav';
 
 export function Hero() {
   return (
     <header className="chrome hero">
-      <ThemeToggle />
+      <Nav />
       <div className="hero__inner">
         <div className="hero__text" data-reveal>
           {/* The headline is the wordmark (04 §2): icon glyph only up top */}
