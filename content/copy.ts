@@ -254,8 +254,59 @@ export const feedbackForm = {
   error: 'That did not send. Please try again, or email hello@paperthoughts.app.',
 };
 
+// Roadmap (/roadmap). Framed as direction, never commitment — no dates,
+// no version numbers, nothing App Store review could read as a promised
+// feature. Items are real, drawn from the app backlog. "Writing prompts"
+// is the AI-suggestions idea, framed carefully: 01 §2 says this audience
+// is repelled by "AI," so it leads with the benefit (somewhere to start)
+// and the guardrail (never writes for you), not the technology.
+export const roadmap = {
+  heading: 'Where it is headed',
+  intro:
+    'Paper Thoughts is built by one person, working in the open. Here is what is on my mind. None of it is a promise or a date, just the direction.',
+  groups: [
+    {
+      title: 'On the way',
+      items: [
+        {
+          name: 'Shape snapping',
+          line: 'Draw a rough line, box, or circle and hold, and it settles into a clean shape.',
+        },
+        {
+          name: 'Gentle reminders',
+          line: 'An optional nudge to write, on your own schedule. Never a streak.',
+        },
+        {
+          name: 'Start from a suggestion',
+          line: "Begin an entry from the day's moments, using Apple's private on-device Journaling Suggestions.",
+        },
+      ],
+    },
+    {
+      title: 'Exploring',
+      items: [
+        {
+          name: 'Handwriting search',
+          line: 'Finding words inside your ink, once iPadOS supports it properly.',
+        },
+        {
+          name: 'Writing prompts',
+          line: 'A quiet prompt for when the page is blank and you want somewhere to start. Optional, private, and never writing for you.',
+        },
+        {
+          name: 'Markdown export',
+          line: 'Another way to take your writing out, alongside PDF and journal files.',
+        },
+      ],
+    },
+  ],
+  outro:
+    'Want something that is not here? The support page has a form, and every note gets read.',
+};
+
 export const footer = {
   note: 'No cookies. Obviously.',
   privacyLink: 'Privacy',
   supportLink: 'Support',
+  roadmapLink: 'Roadmap',
 };
