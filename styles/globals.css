@@ -565,6 +565,13 @@ html[data-theme='light'] .theme-toggle__moon {
   width: 4.5rem;
 }
 
+.features__check--text {
+  color: var(--color-ink);
+  font-weight: 500;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
 .centered {
   text-align: center;
   margin: 0 auto;

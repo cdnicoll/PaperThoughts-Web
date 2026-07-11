@@ -31,6 +31,6 @@ The website is the app's philosophy applied to the web: a quiet, typographic, pa
 3. Pages: one page + privacy/support subpages (04 §1).
 4. Dark mode: **ship at v1** (05 §5).
 5. Analytics: **none at v1**; privacy counter later when drawing traffic (06 §5).
-6. Pricing: **free version at launch; paid model TBD (possibly lifetime).** "No subscription. Ever." retired 2026-07-10 — site says "Free to write in." and makes no anti-subscription claims.
+6. Pricing: **decided via app issue #92** — free tier with every feature (3 journals, 5 entries each); Premium removes limits ($3.99/mo, $24.99/yr, $59.99 lifetime — confirm prices at App Store Connect setup). Content never locked. "No subscription. Ever." stays retired.
 
 Details live in Phase 0 of [07-implementation-plan.md](07-implementation-plan.md).

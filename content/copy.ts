@@ -98,23 +98,38 @@ export const privacy = {
   proof: ['No accounts.', 'No servers of ours.', 'Locked with Face ID.'],
 };
 
-// Pricing positioning (decided 2026-07-10): free version at launch; paid
-// model TBD (possibly lifetime). The old "No subscription. Ever." promise
-// is retired — never reintroduce it. This section stays true under any
-// future model: free to start, and the writing is always exportable.
+// Pricing per app issue #92 (2026-07-10): free tier has every feature,
+// capped at 3 journals / 5 entries per journal; Premium removes the
+// limits. PRICES ARE #92 DEFAULTS — confirm against App Store Connect
+// before the launch flip. "No subscription. Ever." stays retired; the
+// trust line (never locked, always exportable) is an App Store
+// requirement AND the pitch.
 export const pricing = {
   heading: 'Free to write in.',
-  body: 'Download it and start. Export everything as PDF or portable journal files whenever you like. It is your writing.',
+  body: 'Every feature is free, up to three journals with five entries each. Premium removes the limits: $3.99 a month, $24.99 a year, or $59.99 once, yours forever. Your writing is never locked. Read and export everything, always.',
 };
 
-// The feature table. Rows mined from the closed GitHub issues (all 90) and
-// 02-feature-inventory. One "Free" column today, all checked; the markup
-// takes more tier columns when the paid model is decided (2026-07-10:
-// free version at launch, paid tier TBD, possibly lifetime).
+// The feature table. Rows mined from the closed GitHub issues and
+// 02-feature-inventory; tiers per app issue #92. Both tier columns check
+// every feature ON PURPOSE — no feature gates is the story. Only the
+// Limits group differs.
 export const features = {
   heading: "What's inside",
-  sub: 'The full list.',
-  includedLabel: 'Free',
+  sub: 'Every feature, in both tiers. Premium removes the limits.',
+  columns: ['Free', 'Premium'],
+  limits: {
+    title: 'Limits',
+    rows: [
+      { name: 'Journals', line: '', free: '3', premium: 'Unlimited' },
+      { name: 'Entries per journal', line: '', free: '5', premium: 'Unlimited' },
+      {
+        name: 'Read and export',
+        line: 'Never locked, even if Premium lapses.',
+        free: 'Always',
+        premium: 'Always',
+      },
+    ],
+  },
   groups: [
     {
       title: 'Write',
@@ -166,6 +181,10 @@ export const faq = {
     {
       q: 'Do I need an Apple Pencil?',
       a: 'Yes. It is built for it. Typed entries work without one.',
+    },
+    {
+      q: 'What does it cost?',
+      a: 'Nothing to start. Every feature is free for three journals with five entries each. Premium removes the limits, from $3.99 a month or $59.99 once.',
     },
     {
       q: 'What about iPhone?',

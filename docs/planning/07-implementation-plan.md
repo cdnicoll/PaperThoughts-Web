@@ -25,11 +25,15 @@ current captures live in `demo_journals/_captures/`.
    URLs to be live).
 3. **Dark mode: ship at v1.** Same token set via Ink & Glow; plus a manual
    sun/moon toggle (localStorage, pre-paint apply) added at Cody's request.
-4. **Pricing (supersedes the buy-once framing in 01/04/06):** free version at
-   launch, paid model TBD (possibly lifetime subscription). Site section is
-   "Free to write in."; the feature table carries a single all-checked "Free"
-   column and takes tier columns later. "No subscription. Ever." is retired
-   and must not reappear.
+4. **Pricing (decided via app issue #92, 2026-07-10 evening):** free tier
+   has EVERY feature, capped at 3 journals / 5 entries per journal; Premium
+   removes the limits — $3.99/mo, $24.99/yr, $59.99 lifetime (#92 defaults;
+   confirm against App Store Connect before the launch flip). Content is
+   never locked: read and export always work, even lapsed. Site: "Free to
+   write in." section carries the model + prices; the feature table is
+   Free/Premium with every feature checked in BOTH columns (no feature
+   gates is the story) and a Limits group holding the only differences.
+   "No subscription. Ever." stays retired.
 5. **Feature presentation:** the six-item extras cap from 04 §7 is superseded
    by a framed-device gallery (2×2 grid on the chrome band) + a grouped
    feature table mined from the closed issues. Word budget accepted at ~550.

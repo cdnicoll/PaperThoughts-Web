@@ -33,7 +33,7 @@ Three pillars, in order (matches PRD §11 differentiators):
 
 1. **Pencil-first.** Built exclusively for Apple Pencil. The pencil always draws; nothing gets between you and the page. (Contrast, unstated: Day One's keyboard-first ink, Apple Journal's bugs.)
 2. **Distraction-free, for the modern age.** Paper styles, serif dates, muted tags, no badges, no dashboards — a simplified journal that stays out of the way. (Contrast, unstated: Penjo's clutter, Noteshelf's feature wall.) Framing note (2026-07-10): do not sell this as *replacing* paper — no "better than paper" or paper-simulator claims. It's a calm digital journal, full stop.
-3. **Private by architecture.** Your iCloud. No accounts, no servers, no analytics on your writing. (Pricing repositioned 2026-07-10: "bought once, no subscription" is retired — there will be a free version at launch and a paid model TBD, possibly lifetime. The site markets the free version and makes no anti-subscription claims. Never reintroduce "No subscription. Ever.")
+3. **Private by architecture.** Your iCloud. No accounts, no servers, no analytics on your writing. (Pricing decided via app issue #92, 2026-07-10: free tier has every feature at 3 journals / 5 entries each; Premium removes limits — monthly, yearly, or lifetime. The trust angle carries the old anti-subscription energy honestly: no feature gates, and your writing is never locked — read and export always. Never reintroduce "No subscription. Ever.")
 
 Rule for all copy: never name competitors on the site. The positioning is built from their weaknesses, but the page states it as our virtues. Reviewers and Reddit will make the comparisons for us.
 

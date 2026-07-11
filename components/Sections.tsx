@@ -135,15 +135,34 @@ export function FeatureTable() {
               <th scope="col">
                 <span className="visually-hidden">Feature</span>
               </th>
-              <th scope="col" className="features__check-col">
-                {features.includedLabel}
-              </th>
+              {features.columns.map((col) => (
+                <th key={col} scope="col" className="features__check-col">
+                  {col}
+                </th>
+              ))}
             </tr>
           </thead>
+          <tbody>
+            <tr className="features__group">
+              <th scope="rowgroup" colSpan={3}>
+                {features.limits.title}
+              </th>
+            </tr>
+            {features.limits.rows.map((row) => (
+              <tr key={row.name}>
+                <td>
+                  <strong>{row.name}</strong>
+                  {row.line && <span>{row.line}</span>}
+                </td>
+                <td className="features__check features__check--text">{row.free}</td>
+                <td className="features__check features__check--text">{row.premium}</td>
+              </tr>
+            ))}
+          </tbody>
           {features.groups.map((group) => (
             <tbody key={group.title}>
               <tr className="features__group">
-                <th scope="rowgroup" colSpan={2}>
+                <th scope="rowgroup" colSpan={3}>
                   {group.title}
                 </th>
               </tr>
@@ -153,7 +172,12 @@ export function FeatureTable() {
                     <strong>{row.name}</strong>
                     <span>{row.line}</span>
                   </td>
-                  <td className="features__check" aria-label="Included">
+                  {/* Both tiers, every feature — the limits above are the
+                      only difference (#92) */}
+                  <td className="features__check" aria-label="Included in Free">
+                    ✓
+                  </td>
+                  <td className="features__check" aria-label="Included in Premium">
                     ✓
                   </td>
                 </tr>
