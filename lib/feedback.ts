@@ -23,7 +23,7 @@ async function getDb() {
 export async function submitFeedback(input: {
   message: string;
   email: string;
-  source: 'home' | 'support';
+  source: 'home' | 'support' | 'roadmap';
 }) {
   const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
   const db = await getDb();

@@ -308,8 +308,9 @@ export const roadmap = {
       ],
     },
   ],
-  outro:
-    "Want something that's not here? The support page has a form, and I read every note.",
+  // Feature-request form at the end of the roadmap.
+  formHeading: "Want something that's not here?",
+  formSub: "Tell me what you'd like to see next. I read every note.",
 };
 
 export const footer = {

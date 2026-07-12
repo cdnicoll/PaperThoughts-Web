@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { roadmap, site } from '@/content/copy';
 import { Nav } from '@/components/Nav';
+import { FeedbackForm } from '@/components/FeedbackForm';
 
 export const metadata: Metadata = {
   title: `Roadmap · ${site.name}`,
@@ -27,7 +28,11 @@ export default function Roadmap() {
         </section>
       ))}
 
-      <p className="roadmap__outro">{roadmap.outro}</p>
+      <FeedbackForm
+        source="roadmap"
+        heading={roadmap.formHeading}
+        sub={roadmap.formSub}
+      />
     </main>
   );
 }
