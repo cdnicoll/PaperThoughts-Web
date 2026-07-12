@@ -6,6 +6,9 @@ import { FeedbackForm } from '@/components/FeedbackForm';
 
 export const metadata: Metadata = {
   title: `Support · ${site.name}`,
+  description:
+    'Answers to common questions about Paper Thoughts, and a direct line to the developer.',
+  alternates: { canonical: '/support/' },
 };
 
 export default function Support() {

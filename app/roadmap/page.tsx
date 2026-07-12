@@ -5,6 +5,9 @@ import { FeedbackForm } from '@/components/FeedbackForm';
 
 export const metadata: Metadata = {
   title: `Roadmap · ${site.name}`,
+  description:
+    'What is coming to Paper Thoughts and what is being explored, from shape snapping to handwriting search.',
+  alternates: { canonical: '/roadmap/' },
 };
 
 export default function Roadmap() {

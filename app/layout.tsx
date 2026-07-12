@@ -1,16 +1,29 @@
 import type { Metadata, Viewport } from 'next';
 import { site } from '@/content/copy';
-import { isLive } from '@/content/config';
+import { allowIndexing, cloudflareAnalyticsToken, siteUrl } from '@/content/config';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
+  // metadataBase makes every canonical/OG url absolute, and canonicals
+  // point the duplicate paperthoughts-app.web.app host at the real domain.
+  metadataBase: new URL(siteUrl),
   title: site.title,
   description: site.description,
   icons: { icon: '/icon-tile.svg' },
-  // Keep the pre-launch site out of search until the App Store flip.
-  // Flips to indexable automatically when appStoreUrl is set (isLive).
-  robots: isLive ? undefined : { index: false, follow: false },
-  // TODO Phase 3: openGraph image designed from the hero sheet (05 §7)
+  robots: allowIndexing ? undefined : { index: false, follow: false },
+  openGraph: {
+    title: site.title,
+    description: site.description,
+    url: siteUrl,
+    siteName: site.name,
+    type: 'website',
+    // TODO Phase 3: add the OG image designed from the hero sheet (05 §7)
+  },
+  twitter: {
+    card: 'summary',
+    title: site.title,
+    description: site.description,
+  },
 };
 
 export const viewport: Viewport = {
@@ -100,6 +113,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <script dangerouslySetInnerHTML={{ __html: revealScript }} />
         {children}
+        {/* Cloudflare Web Analytics: cookieless, anonymous page counts.
+            Renders only once the token is set in content/config.ts, and
+            the privacy page discloses it. */}
+        {cloudflareAnalyticsToken && (
+          <script
+            type="module"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: cloudflareAnalyticsToken })}
+          />
+        )}
       </body>
     </html>
   );

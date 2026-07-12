@@ -1,0 +1,27 @@
+# Paper Thoughts
+
+> A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else. Made by one independent developer in Canada.
+
+Paper Thoughts is a distraction-free journaling app built around the Apple Pencil. The pencil always draws, fingers never mark the page, and pages grow as you write. Photos sit in small tilted frames you place with your fingers. Location is added with one tap and shown as a line of text, not a map.
+
+## Key facts
+
+- Platform: iPad (with an iPhone companion app for reading and typed notes)
+- Requires: Apple Pencil for handwriting; typed entries work without one
+- Privacy: journals sync through the user's own iCloud. No accounts, no developer servers, no analytics on journal content. Optional Face ID/Touch ID lock. Works offline.
+- Pricing: free tier includes every feature, up to 3 journals with 5 entries each. Premium removes the limits: $3.99/month, $24.99/year, or $59.99 once (lifetime). Reading and exporting are never locked, even if Premium lapses.
+- Export: single entries or whole journals as PDF, or as portable journal files
+- Paper: blank, lined, grid, or dots, in three sizes and nine colours, with real dark-paper support
+- Organization: multiple journals with muted covers, tags, bookmarks (whole entries or single handwritten passages), Recently Deleted with 30-day recovery
+- Status: in beta. Beta signups are open on the homepage.
+
+## Pages
+
+- [Home](https://paperthoughts.app/): overview, features, pricing, FAQ, beta signup
+- [Support](https://paperthoughts.app/support/): full FAQ and a contact form
+- [Roadmap](https://paperthoughts.app/roadmap/): what is planned and being explored
+- [Privacy](https://paperthoughts.app/privacy/): the privacy policy
+
+## Contact
+
+hello@paperthoughts.app

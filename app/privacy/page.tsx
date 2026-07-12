@@ -7,6 +7,9 @@ import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
   title: `Privacy · ${site.name}`,
+  description:
+    'Paper Thoughts stores journals in your own iCloud. No accounts, no servers, and no way for anyone else to read what you write.',
+  alternates: { canonical: '/privacy/' },
 };
 
 // The policy text lives in content/privacy.md — the single source of truth,
