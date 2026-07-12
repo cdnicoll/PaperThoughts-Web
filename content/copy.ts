@@ -1,21 +1,19 @@
 // Every string on the marketing page lives here (planning 06 §6):
-// edit words without touching JSX. Word budget for the main page is
-// under 350 (04 §3) — count before adding.
+// edit words without touching JSX.
 //
-// Copy rules (brand readme, 04 §3): sentence case, short sentences,
-// concrete nouns, no exclamation marks, no emoji, no paper-replacement
-// claims. Every claim must be demonstrable in a screenshot.
+// Voice: warm, plain, human. Contractions are fine and wanted. First
+// person singular ("I") for anything personal, since it's one developer.
+// Still: sentence case, short sentences, concrete nouns, no exclamation
+// marks, no emoji, no hype, no paper-replacement claims.
 
 export const site = {
   name: 'Paper Thoughts',
-  title: 'Paper Thoughts — a quiet journal for iPad',
+  title: 'Paper Thoughts, a handwriting journal for iPad',
   description:
-    'A handwriting journal for iPad and Apple Pencil. Your ink, your photos, your places, in your iCloud and nowhere else.',
+    'A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else.',
   email: 'hello@paperthoughts.app',
 };
 
-// Quiet hero nav (web issue #3). Exactly three links — matches the
-// "three quiet links at most" rule in planning 04 §2.
 export const nav = {
   features: 'Features',
   roadmap: 'Roadmap',
@@ -24,7 +22,7 @@ export const nav = {
 
 export const hero = {
   headline: 'Paper Thoughts.',
-  sub: 'A handwriting journal for iPad and Apple Pencil. Your ink, your photos, your places, in your iCloud and nowhere else.',
+  sub: 'A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else.',
   sheetAlt:
     'A handwritten journal entry on cream paper, with a doodle and a location line',
 };
@@ -36,7 +34,7 @@ export const cta = {
 
 export const pencil = {
   heading: 'Pick up the Pencil and write.',
-  body: 'The pencil always draws. Fingers never leave a mark. Pages grow as you write, and nothing gets between you and the page.',
+  body: 'The pencil always draws, and your fingers never leave a mark. Write past the bottom of the page and it just keeps going.',
   imageAlt: 'The writing canvas with the tool picker open and ink mid-stroke',
 };
 
@@ -54,9 +52,8 @@ export const paper = {
 
 export const photos = {
   heading: 'Your photos and places, on the page.',
-  body: 'Photos sit in little frames you place with your fingers. Location is one tap and a quiet line of text.',
-  subBeat: 'No photo yet? Drop an empty frame now and add the picture tonight.',
-  // Two slides, same crop window: the empty frame, then the photo in it.
+  body: 'Photos sit in little frames you place with your fingers. Add where you were with a tap, and it shows up as text, not a map.',
+  subBeat: "No photo yet? Drop an empty frame now and add the picture tonight.",
   slides: [
     {
       img: 'photos-empty.png',
@@ -76,51 +73,47 @@ export const gallery = {
     {
       img: 'gallery-location.png',
       device: 'ipad',
-      caption: 'A place, one tap. Or drop the pin yourself.',
+      caption: 'A place with one tap, or drop the pin yourself.',
       alt: 'The location picker: a map of Kamloops with a dropped pin over a garden entry',
     },
     {
       img: 'gallery-details.png',
       device: 'ipad',
-      caption: 'Location, mood, and tags, in the margins.',
+      caption: 'Location, mood, and tags, off to the side.',
       alt: 'The details panel beside an entry: title, tags, location, and a state of mind picker',
     },
     {
       img: 'gallery-dark.png',
       device: 'ipad',
-      caption: 'Dark paper, when the day calls for it.',
+      caption: 'Dark paper for writing at night.',
       alt: 'A hiking entry written in white ink on dark paper, with three photos',
     },
     {
       img: 'gallery-stats.png',
       device: 'ipad',
-      caption: 'A quiet look back: the days you wrote, the places you wrote from.',
+      caption: 'The days you wrote, and the places you wrote from.',
       alt: 'The insights screen: entry counts, a year of writing days, a calendar, and places',
     },
   ],
 };
 
 export const privacy = {
-  // Verbatim from brand/readme.md via 04 §2.
-  heading: 'Your journals are stored in your iCloud. We never see them.',
-  proof: ['No accounts.', 'No servers of ours.', 'Locked with Face ID.'],
+  // "I never see them" is the personal, solo-dev version of the brand line.
+  heading: 'Your journals are stored in your iCloud. I never see them.',
+  proof: ['No accounts.', 'No servers of mine.', 'Locked with Face ID.'],
 };
 
-// Pricing per app issue #92 (2026-07-10): free tier has every feature,
-// capped at 3 journals / 5 entries per journal; Premium removes the
-// limits. PRICES ARE #92 DEFAULTS — confirm against App Store Connect
-// before the launch flip. "No subscription. Ever." stays retired; the
-// trust line (never locked, always exportable) is an App Store
-// requirement AND the pitch.
+// Pricing per app issue #92. Free tier has every feature, capped at 3
+// journals / 5 entries each; Premium removes limits. PRICES ARE #92
+// DEFAULTS — confirm against App Store Connect before the launch flip.
 export const pricing = {
   heading: 'Free to write in.',
-  body: 'Every feature is free, up to three journals with five entries each. Premium removes the limits: $3.99 a month, $24.99 a year, or $59.99 once, yours forever. Your writing is never locked. Read and export everything, always.',
+  body: "Every feature is free, up to three journals with five entries each. Premium lifts the limits for $3.99 a month, $24.99 a year, or $59.99 once and yours for good. Either way your writing is never locked, and you can export all of it whenever you want.",
 };
 
-// The feature table. Rows mined from the closed GitHub issues and
-// 02-feature-inventory; tiers per app issue #92. Both tier columns check
-// every feature ON PURPOSE — no feature gates is the story. Only the
-// Limits group differs.
+// The feature table. Rows from the closed GitHub issues and
+// 02-feature-inventory; tiers per app issue #92. Both columns check every
+// feature on purpose. Only the Limits group differs.
 export const features = {
   heading: "What's inside",
   sub: 'Every feature, in both tiers. Premium removes the limits.',
@@ -142,8 +135,8 @@ export const features = {
     {
       title: 'Write',
       rows: [
-        { name: 'Pencil-first canvas', line: 'The pencil always draws; fingers never mark the page.' },
-        { name: 'Pages that grow', line: 'Write past the bottom and the page appends.' },
+        { name: 'Pencil-first canvas', line: 'The pencil always draws, and your fingers never mark the page.' },
+        { name: 'Pages that grow', line: 'Write past the bottom and the page keeps going.' },
         { name: 'Paper styles', line: 'Blank, lined, grid, or dots, in three sizes.' },
         { name: 'Paper colours', line: 'Nine colours, including auto light and dark.' },
         { name: 'Typed entries', line: 'Serif type on the same paper, for keyboard days.' },
@@ -153,7 +146,7 @@ export const features = {
     {
       title: 'Keep',
       rows: [
-        { name: 'Photos in frames', line: 'Place, tilt, and crop with your fingers; write around them.' },
+        { name: 'Photos in frames', line: 'Place, tilt, and crop them with your fingers, then write around them.' },
         { name: 'Photo placeholders', line: 'Drop an empty frame now, add the picture tonight.' },
         { name: 'Location, one tap', line: 'Real place names, or drop the pin yourself.' },
         { name: 'State of mind', line: 'How the day felt, if you want it.' },
@@ -164,9 +157,9 @@ export const features = {
       title: 'Organize',
       rows: [
         { name: 'Multiple journals', line: 'Six muted covers, each with its own paper.' },
-        { name: 'Tags', line: 'Quiet labels that filter across every journal.' },
-        { name: 'Bookmarks', line: 'An entry, or a single handwritten passage.' },
-        { name: 'A quiet look back', line: 'Calendars of writing days and places. Never scores.' },
+        { name: 'Tags', line: 'Simple labels that filter across every journal.' },
+        { name: 'Bookmarks', line: 'A whole entry, or a single handwritten passage.' },
+        { name: 'A look back', line: 'Calendars of writing days and places. Never scores.' },
         { name: 'Home Screen widgets', line: 'Writing days and places, at a glance.' },
         { name: 'Recently Deleted', line: 'Thirty days to change your mind.' },
       ],
@@ -174,10 +167,10 @@ export const features = {
     {
       title: 'Yours',
       rows: [
-        { name: 'iCloud sync', line: 'Your iCloud, across your devices. No accounts of ours.' },
+        { name: 'iCloud sync', line: 'Your iCloud, across your devices. No accounts of mine.' },
         { name: 'Face ID lock', line: 'The journal locks like a diary.' },
         { name: 'PDF and portable exports', line: 'Entries or whole journals, out anytime.' },
-        { name: 'iPhone companion', line: 'Read anywhere; jot a typed thought.' },
+        { name: 'iPhone companion', line: 'Read anywhere, and jot a typed thought.' },
       ],
     },
   ],
@@ -188,43 +181,40 @@ export const faq = {
   items: [
     {
       q: 'Do I need an Apple Pencil?',
-      a: 'Yes. Paper Thoughts is built around the Pencil, so the page always draws and your finger never leaves a mark. If you set it down, typed entries still work, and the iPhone companion lets you read and jot from anywhere.',
+      a: "Yes. It's built around the Pencil, so the page always draws and your finger never smudges it. If you set the Pencil down, typed entries still work, and the iPhone companion lets you read and jot from anywhere.",
     },
     {
       q: 'What does it cost?',
-      a: 'Nothing to start. Every feature is free, up to three journals with five entries each. Premium removes the limits for $3.99 a month, $24.99 a year, or $59.99 once. Either way your writing is never locked: you can read and export everything, even if Premium lapses.',
+      a: "Nothing to start. Every feature is free for three journals with five entries each. Premium lifts the limits for $3.99 a month, $24.99 a year, or $59.99 once. Either way your writing is never locked. You can read and export all of it, even if Premium lapses.",
     },
     {
       q: 'What about iPhone?',
-      a: 'There is an iPhone companion. Read your whole journal, pinch into your ink, and capture a typed thought while you are out. Writing with the Pencil stays on iPad on purpose, because that is where handwriting feels right.',
+      a: "There's an iPhone companion. You can read your whole journal, pinch into your ink, and jot a typed thought while you're out. Handwriting stays on iPad, where it belongs.",
     },
     {
       q: 'Where is my data?',
-      a: 'In your own iCloud, synced across your devices. We have no servers and no accounts, so we never see a word you write. Lock the app with Face ID, and it all keeps working offline.',
+      a: "In your own iCloud, synced across your devices. I have no servers and no accounts, so I never see a word you write. Lock it with Face ID, and it all works offline.",
     },
     {
       q: 'Can I get my writing out?',
-      a: 'Anytime. Export a single entry or a whole journal as a PDF, or as a portable journal file you can keep or move elsewhere. It is your writing, so it never gets trapped in the app.',
+      a: "Anytime. Export a single entry or a whole journal as a PDF, or as a portable file you can keep or move elsewhere. It's your writing, so it's never trapped in the app.",
     },
     {
       q: 'Is there handwriting search?',
-      a: 'Not yet. You can already filter by tag and browse by journal, but searching the handwriting itself is coming once iPadOS supports it properly, rather than shipping something that only half works.',
+      a: "Not yet. You can filter by tag and browse by journal today. Searching the handwriting itself is coming once iPadOS supports it properly, instead of shipping something half-baked.",
     },
   ],
 };
 
-// Extra questions shown only on the fuller /support page, on top of the
-// main-page six. Facts are accurate to shipped features (#92 limits,
-// iCloud sync, Recently Deleted, move between journals, App Lock); UI
-// steps stay general rather than inventing exact tap paths.
+// Extra questions on the fuller /support page, on top of the main-page six.
 export const supportExtras = [
   {
     q: 'What happens when I reach the free limit?',
-    a: 'Nothing you have written is touched. You keep full read and export access to everything, and only creating new journals or entries beyond the free limit asks you to go Premium.',
+    a: "Nothing you've written is touched. You keep full read and export access, and only making new journals or entries past the free limit asks you to go Premium.",
   },
   {
     q: 'Can I use it on more than one device?',
-    a: 'Yes. Your journals sync through your own iCloud, so they appear on every iPad and iPhone signed in to the same Apple account.',
+    a: 'Yes. Your journals sync through your own iCloud, so they show up on every iPad and iPhone signed in to the same Apple account.',
   },
   {
     q: 'How do I get back an entry I deleted?',
@@ -232,53 +222,63 @@ export const supportExtras = [
   },
   {
     q: 'How do I move an entry to another journal?',
-    a: 'Open the entry details and pick a different journal. Its tags move with it.',
+    a: 'Open the entry details and pick a different journal. Its tags come along with it.',
   },
   {
     q: 'How do I lock the journal?',
-    a: 'Turn on Face ID or Touch ID in Settings. The journal locks when you leave and asks to unlock when you return.',
+    a: 'Turn on Face ID or Touch ID in Settings. The journal locks when you leave and asks to unlock when you come back.',
   },
 ];
 
-// The main-page invitation. Indie authenticity (01 §1): the maker reads
-// everything. Warm, not a popup, not complicated.
+// Main-page invitation. One developer, first person.
 export const feedbackInvite = {
-  heading: 'Tell us what you want next',
-  sub: 'Paper Thoughts is made by one person who reads every note. A feature you wish it had, a rough edge, or just hello.',
+  heading: 'Tell me what you want next',
+  sub: "Paper Thoughts is made by one person, and I read every note. Tell me about a feature you want, a rough edge, or just say hello.",
 };
 
-// Form mechanics, shared by both placements. Headings live with each caller.
-export const feedbackForm = {
-  supportHeading: 'Send us a note',
-  supportSub: 'Feedback, a feature you wish existed, or a question. We read everything.',
-  messageLabel: 'Your note',
-  messagePlaceholder: 'What is on your mind?',
+// Beta signup (below the hero). CASL-clean: they're asking for an invite,
+// which is express consent to contact them.
+export const betaSignup = {
+  heading: 'Be part of the beta',
+  sub: "Paper Thoughts is testing with a small group first. Leave your name and email and I'll send you an invite.",
+  nameLabel: 'Name',
+  namePlaceholder: 'Your name',
   emailLabel: 'Email',
-  emailHint: 'Optional, only if you would like a reply.',
+  emailPlaceholder: 'you@example.com',
+  submit: 'Join the beta',
+  submitting: 'Joining',
+  success: "You're on the list. I'll be in touch soon.",
+  error: "That didn't go through. Give it another try, or email hello@paperthoughts.app.",
+};
+
+// Feedback form mechanics, shared by both placements.
+export const feedbackForm = {
+  supportHeading: 'Send me a note',
+  supportSub: 'Feedback, a feature you wish existed, or a question. I read everything.',
+  messageLabel: 'Your note',
+  messagePlaceholder: "What's on your mind?",
+  emailLabel: 'Email',
+  emailHint: "Optional, only if you'd like a reply.",
   emailPlaceholder: 'you@example.com',
   submit: 'Send',
   submitting: 'Sending',
-  success: 'Thanks. We have it, and we read everything.',
-  error: 'That did not send. Please try again, or email hello@paperthoughts.app.',
+  success: "Thanks, I've got it. I read everything.",
+  error: "That didn't go through. Give it another try, or email hello@paperthoughts.app.",
 };
 
-// Roadmap (/roadmap). Framed as direction, never commitment — no dates,
-// no version numbers, nothing App Store review could read as a promised
-// feature. Items are real, drawn from the app backlog. "Writing prompts"
-// is the AI-suggestions idea, framed carefully: 01 §2 says this audience
-// is repelled by "AI," so it leads with the benefit (somewhere to start)
-// and the guardrail (never writes for you), not the technology.
+// Roadmap (/roadmap). Direction, not commitment: no dates, no versions,
+// nothing App Store review could read as a promised feature.
 export const roadmap = {
-  heading: 'Where it is headed',
+  heading: "Where it's headed",
   intro:
-    'Paper Thoughts is built by one person, working in the open. Here is what is on my mind. None of it is a promise or a date, just the direction.',
+    "Paper Thoughts is built by one person, out in the open. Here's what's on my mind. None of this is a promise or a date, just where things are going.",
   groups: [
     {
       title: 'On the way',
       items: [
         {
           name: 'Shape snapping',
-          line: 'Draw a rough line, box, or circle and hold, and it settles into a clean shape.',
+          line: 'Draw a rough line, box, or circle and hold it, and it snaps into a clean shape.',
         },
         {
           name: 'Gentle reminders',
@@ -286,7 +286,7 @@ export const roadmap = {
         },
         {
           name: 'Start from a suggestion',
-          line: "Begin an entry from the day's moments, using Apple's private on-device Journaling Suggestions.",
+          line: "Start an entry from the day's moments, using Apple's private on-device Journaling Suggestions.",
         },
       ],
     },
@@ -299,17 +299,17 @@ export const roadmap = {
         },
         {
           name: 'Writing prompts',
-          line: 'A quiet prompt for when the page is blank and you want somewhere to start. Optional, private, and never writing for you.',
+          line: "A gentle prompt for when the page is blank and you want somewhere to start. Optional, private, and it never writes for you.",
         },
         {
           name: 'Markdown export',
-          line: 'Another way to take your writing out, alongside PDF and journal files.',
+          line: 'One more way to get your writing out, alongside PDF and journal files.',
         },
       ],
     },
   ],
   outro:
-    'Want something that is not here? The support page has a form, and every note gets read.',
+    "Want something that's not here? The support page has a form, and I read every note.",
 };
 
 export const footer = {

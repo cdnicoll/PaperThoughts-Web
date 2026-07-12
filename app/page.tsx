@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero';
+import { BetaSignup } from '@/components/BetaSignup';
 import { Gallery } from '@/components/Gallery';
 import { Footer } from '@/components/Footer';
 import {
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <Hero />
       <main>
+        <BetaSignup />
         <Pencil />
         <PaperStyles />
         <PhotosPlaces />

@@ -6,7 +6,7 @@ import { site } from '@/content/copy';
 import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
-  title: `Privacy — ${site.name}`,
+  title: `Privacy · ${site.name}`,
 };
 
 // The policy text lives in content/privacy.md — the single source of truth,

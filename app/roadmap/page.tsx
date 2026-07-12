@@ -3,7 +3,7 @@ import { roadmap, site } from '@/content/copy';
 import { Nav } from '@/components/Nav';
 
 export const metadata: Metadata = {
-  title: `Roadmap — ${site.name}`,
+  title: `Roadmap · ${site.name}`,
 };
 
 export default function Roadmap() {

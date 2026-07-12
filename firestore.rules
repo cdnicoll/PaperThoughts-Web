@@ -20,6 +20,30 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
 
+    // Beta signups. Doubles as the record and the Trigger Email extension's
+    // source doc. `to` is hard-locked to our own address so a client can
+    // never send email anywhere else — no open relay. Read/update/delete
+    // denied to clients; the extension writes delivery status via admin.
+    match /beta_signups/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(['name', 'email', 'to', 'message', 'source', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.email is string
+        && request.resource.data.email.size() > 0
+        && request.resource.data.email.size() <= 320
+        && request.resource.data.to == 'hello@paperthoughts.app'
+        && request.resource.data.message.keys().hasOnly(['subject', 'text'])
+        && request.resource.data.message.subject is string
+        && request.resource.data.message.subject.size() <= 200
+        && request.resource.data.message.text is string
+        && request.resource.data.message.text.size() <= 1000
+        && request.resource.data.source == 'beta'
+        && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

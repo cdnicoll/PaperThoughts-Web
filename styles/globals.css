@@ -764,6 +764,23 @@ html[data-theme='light'] .theme-toggle__moon {
   font-size: 0.9rem;
 }
 
+/* --- Beta signup (below the hero) --- */
+.beta__form {
+  margin-top: 1.75rem;
+}
+
+.beta__fields {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 560px) {
+  .beta__fields {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* --- Feedback form (support page + main-page invite) --- */
 .feedback {
   margin-top: 3rem;

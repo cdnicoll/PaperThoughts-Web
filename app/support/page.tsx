@@ -5,7 +5,7 @@ import { FaqList } from '@/components/FaqList';
 import { FeedbackForm } from '@/components/FeedbackForm';
 
 export const metadata: Metadata = {
-  title: `Support — ${site.name}`,
+  title: `Support · ${site.name}`,
 };
 
 export default function Support() {
@@ -14,8 +14,8 @@ export default function Support() {
       <Nav brand />
       <h1>Support</h1>
       <p>
-        Write to <a href={`mailto:${site.email}`}>{site.email}</a> and a human
-        (the one who made the app) will reply.
+        Write to <a href={`mailto:${site.email}`}>{site.email}</a> and I'll
+        reply. I'm the person who made the app.
       </p>
       <FaqList items={[...faq.items, ...supportExtras]} />
       <FeedbackForm
