@@ -43,21 +43,24 @@
   --shadow-card: 0 4px 12px rgba(30, 27, 19, 0.13), 0 2px 4px rgba(30, 27, 19, 0.08);
 }
 
-/* Dark: the chrome ground extended (05 §5). Values from the app's
-   dark colorsets: AppBackground, CanvasBackground, TextPrimary,
-   TextSecondary, Accent, AccentWarm.
-   Two triggers, same values: the OS preference (unless the user
-   picked light with the toggle), or an explicit data-theme="dark".
-   Keep both blocks in sync. */
+/* Dark: neutral near-black (brand colors.css dark scheme, 2026-07-13).
+   Values from the app's dark colorsets: AppBackground,
+   CanvasBackground, TextPrimary, TextSecondary, Accent, AccentWarm.
+   Surfaces are neutral gray, almost black — not pine and not warm
+   brown (both were tried and clashed). Warmth lives in the cream
+   text and the sage/amber accents. Chrome keeps its fixed pine
+   ground. Two triggers, same values: the OS preference (unless the
+   user picked light with the toggle), or an explicit
+   data-theme="dark". Keep both blocks in sync. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --color-canvas: #14211B;
-    --color-sunken: #232019;
-    --color-raised: #2B2820;
+    --color-canvas: #151515;
+    --color-sunken: #202020;
+    --color-raised: #262626;
     --color-ink: #F2EDE4;
     --color-body: #E7DFD2;
     --color-muted: #B8AF9F;
-    --color-rule: #3A352D;
+    --color-rule: #2E2E2E;
     --color-brand: #7DB597;
     --color-brand-hover: #A9CFBA;
     --color-link: #7DB597;
@@ -67,13 +70,13 @@
 }
 
 :root[data-theme='dark'] {
-  --color-canvas: #14211B;
-  --color-sunken: #232019;
-  --color-raised: #2B2820;
+  --color-canvas: #151515;
+  --color-sunken: #202020;
+  --color-raised: #262626;
   --color-ink: #F2EDE4;
   --color-body: #E7DFD2;
   --color-muted: #B8AF9F;
-  --color-rule: #3A352D;
+  --color-rule: #2E2E2E;
   --color-brand: #7DB597;
   --color-brand-hover: #A9CFBA;
   --color-link: #7DB597;
