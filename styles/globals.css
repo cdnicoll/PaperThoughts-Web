@@ -408,14 +408,28 @@ html[data-theme='light'] .theme-toggle__moon {
   color: var(--accent-on-chrome);
 }
 
+/* Apple's badge artwork carries its own black fill and keyline, so the
+   link is bare: just size, and a quiet lift on hover. */
 .cta--badge {
   display: inline-block;
-  background: var(--accent-on-chrome);
-  color: #1E1B13;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.8125rem 1.625rem;
-  border-radius: var(--radius-md);
+  line-height: 0;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.cta--badge img {
+  display: block;
+  height: 3.375rem;
+  width: auto;
+}
+
+.cta--badge:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+/* A CTA sitting inside a content section (e.g. the badge after pricing) */
+.section__cta {
+  margin-top: 2rem;
 }
 
 /* ============================================================

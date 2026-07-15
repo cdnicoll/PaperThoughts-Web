@@ -8,6 +8,8 @@ import {
   pricing,
   privacy,
 } from '@/content/copy';
+import { isLive } from '@/content/config';
+import { Cta } from './Cta';
 import { FaqList } from './FaqList';
 import { FeedbackForm } from './FeedbackForm';
 
@@ -129,6 +131,13 @@ export function Pricing() {
       <div className="section__inner section__inner--narrow" data-reveal>
         <h2>{pricing.heading}</h2>
         <p>{pricing.body}</p>
+        {/* The mid-page download moment: right after "free to write in".
+            Only once we're live — pre-launch this section stays words-only. */}
+        {isLive && (
+          <div className="section__cta">
+            <Cta />
+          </div>
+        )}
       </div>
     </section>
   );

@@ -139,6 +139,7 @@ export const features = {
         { name: 'Pages that grow', line: 'Write past the bottom and the page keeps going.' },
         { name: 'Paper styles', line: 'Blank, lined, grid, or dots, in three sizes.' },
         { name: 'Paper colours', line: 'Nine colours, including auto light and dark.' },
+        { name: 'Journaling prompts', line: "A question to drop onto the page and answer in ink, for blank-page days." },
         { name: 'Typed entries', line: 'Serif type on the same paper, for keyboard days.' },
         { name: 'Dark mode', line: 'Your ink re-renders for dark paper.' },
       ],
@@ -149,7 +150,7 @@ export const features = {
         { name: 'Photos in frames', line: 'Place, tilt, and crop them with your fingers, then write around them.' },
         { name: 'Photo placeholders', line: 'Drop an empty frame now, add the picture tonight.' },
         { name: 'Location, one tap', line: 'Real place names, or drop the pin yourself.' },
-        { name: 'State of mind', line: 'How the day felt, if you want it.' },
+        { name: 'State of mind', line: 'How the day felt, if you want it. Saved privately to Apple Health.' },
         { name: 'Works offline', line: 'Places and sync catch up when you are back.' },
       ],
     },
@@ -201,7 +202,7 @@ export const faq = {
     },
     {
       q: 'Is there handwriting search?',
-      a: "Not yet. You can filter by tag and browse by journal today. Searching the handwriting itself is coming once iPadOS supports it properly, instead of shipping something half-baked.",
+      a: "Not yet. You can filter by journal, place, tag, or date today. Searching the handwriting itself is coming once iPadOS supports it properly, instead of shipping something half-baked.",
     },
   ],
 };
@@ -237,7 +238,8 @@ export const feedbackInvite = {
 };
 
 // Beta signup (below the hero). CASL-clean: they're asking for an invite,
-// which is express consent to contact them.
+// which is express consent to contact them. Dormant once config.ts flips
+// to live — page.tsx stops rendering the section at launch.
 export const betaSignup = {
   heading: 'Be part of the beta',
   sub: "Paper Thoughts is testing with a small group first. Leave your name and email and I'll send you an invite.",
@@ -296,10 +298,6 @@ export const roadmap = {
         {
           name: 'Handwriting search',
           line: 'Finding words inside your ink, once iPadOS supports it properly.',
-        },
-        {
-          name: 'Writing prompts',
-          line: "A gentle prompt for when the page is blank and you want somewhere to start. Optional, private, and it never writes for you.",
         },
         {
           name: 'Markdown export',

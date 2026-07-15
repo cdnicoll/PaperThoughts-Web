@@ -14,7 +14,7 @@ import {
   Privacy,
 } from '@/components/Sections';
 import { faq, site } from '@/content/copy';
-import { siteUrl } from '@/content/config';
+import { appStoreUrl, isLive, siteUrl } from '@/content/config';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -38,6 +38,8 @@ const appJsonLd = {
     highPrice: '59.99',
     priceCurrency: 'USD',
   },
+  // Once live, point search and assistants at the store listing too.
+  ...(isLive && appStoreUrl ? { installUrl: appStoreUrl } : {}),
 };
 
 const faqJsonLd = {
@@ -63,7 +65,9 @@ export default function Home() {
       />
       <Hero />
       <main>
-        <BetaSignup />
+        {/* The beta invite retires at launch: "testing with a small group
+            first" stops being true the moment the badge goes up. */}
+        {!isLive && <BetaSignup />}
         <Pencil />
         <PaperStyles />
         <PhotosPlaces />

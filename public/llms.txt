@@ -13,11 +13,12 @@ Paper Thoughts is a distraction-free journaling app built around the Apple Penci
 - Export: single entries or whole journals as PDF, or as portable journal files
 - Paper: blank, lined, grid, or dots, in three sizes and nine colours, with real dark-paper support
 - Organization: multiple journals with muted covers, tags, bookmarks (whole entries or single handwritten passages), Recently Deleted with 30-day recovery
-- Status: in beta. Beta signups are open on the homepage.
+- Prompts: optional journaling prompts to drop onto the page and answer in ink
+- Status: available on the App Store.
 
 ## Pages
 
-- [Home](https://paperthoughts.app/): overview, features, pricing, FAQ, beta signup
+- [Home](https://paperthoughts.app/): overview, features, pricing, FAQ, and the App Store download link
 - [Support](https://paperthoughts.app/support/): full FAQ and a contact form
 - [Roadmap](https://paperthoughts.app/roadmap/): what is planned and being explored
 - [Privacy](https://paperthoughts.app/privacy/): the privacy policy
