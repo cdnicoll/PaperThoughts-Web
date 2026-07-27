@@ -42,7 +42,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--color-ink);
   font-weight: 600;
   line-height: 1.2;
@@ -214,7 +214,7 @@ html[data-theme='light'] .theme-toggle__moon {
 }
 
 .nav__brand span {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1.0625rem;
   color: var(--color-ink);
@@ -402,7 +402,7 @@ html[data-theme='light'] .theme-toggle__moon {
 /* --- CTA: the hero's one lamp --- */
 .cta--coming-soon {
   display: inline-block;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-size: 1.0625rem;
   color: var(--accent-on-chrome);
@@ -558,7 +558,7 @@ html[data-theme='light'] .theme-toggle__moon {
   flex-wrap: wrap;
   gap: 0.75rem 2.25rem;
   color: var(--color-ink);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
 }
 
@@ -597,7 +597,7 @@ html[data-theme='light'] .theme-toggle__moon {
 }
 
 .features__group th {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-ink);
@@ -677,7 +677,7 @@ html[data-theme='light'] .theme-toggle__moon {
   list-style: none;
   cursor: pointer;
   padding: 1.25rem 0;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-ink);
@@ -882,7 +882,7 @@ html[data-theme='light'] .theme-toggle__moon {
 }
 
 .feedback__success {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   color: var(--color-ink);
 }
@@ -909,7 +909,7 @@ html[data-theme='light'] .theme-toggle__moon {
 }
 
 .roadmap__list dt {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 600;
   color: var(--color-ink);

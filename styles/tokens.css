@@ -28,8 +28,8 @@
   --color-link: #235841;     /* sage-700 */
   --color-accent: #EFA02E;   /* amber-400: rules and fills only, never text */
 
-  /* --- Type: system stacks mirror the app (05 §2) --- */
-  --font-serif: ui-serif, "New York", Georgia, serif;
+  /* --- Type: system stack mirrors the app (05 §2). Newsreader/serif
+     retired (#128) — one sans voice everywhere. --- */
   --font-sans: ui-sans-serif, -apple-system, "SF Pro Text", system-ui, sans-serif;
 
   /* --- Motion (brand radius.css): calm, ease-out, no bounce --- */
