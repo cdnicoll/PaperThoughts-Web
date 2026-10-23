@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   icons: { icon: '/icon-tile.svg' },
+  authors: [{ name: site.company, url: site.companyUrl }],
+  creator: site.company,
+  publisher: site.company,
   robots: allowIndexing ? undefined : { index: false, follow: false },
   openGraph: {
     title: site.title,

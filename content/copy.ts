@@ -12,6 +12,9 @@ export const site = {
   description:
     'A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else.',
   email: 'hello@paperthoughts.app',
+  // The company behind the app. One person, so the copy still says "I".
+  company: 'Quest and Query',
+  companyUrl: 'https://questandquery.ca',
 };
 
 export const nav = {

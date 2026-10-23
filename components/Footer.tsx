@@ -12,7 +12,8 @@ export function Footer() {
         <a href="/support/">{footer.supportLink}</a>
       </div>
       <p className="footer__note">
-        {footer.note} © {new Date().getFullYear()} {site.name}
+        {footer.note} © {new Date().getFullYear()}{' '}
+        <a href={site.companyUrl}>{site.company}</a>
       </p>
     </footer>
   );

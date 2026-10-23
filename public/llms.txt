@@ -1,6 +1,6 @@
 # Paper Thoughts
 
-> A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else. Made by one independent developer in Canada.
+> A handwriting journal for iPad and Apple Pencil. Your ink, photos, and places stay in your iCloud, and nowhere else. Made by Quest and Query (https://questandquery.ca), a one-person company in Canada.
 
 Paper Thoughts is a distraction-free journaling app built around the Apple Pencil. The pencil always draws, fingers never mark the page, and pages grow as you write. Photos sit in small tilted frames you place with your fingers. Location is added with one tap and shown as a line of text, not a map.
 
@@ -26,3 +26,4 @@ Paper Thoughts is a distraction-free journaling app built around the Apple Penci
 ## Contact
 
 hello@paperthoughts.app
+Company: Quest and Query, https://questandquery.ca

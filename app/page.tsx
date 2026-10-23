@@ -32,6 +32,7 @@ const appJsonLd = {
   applicationCategory: 'LifestyleApplication',
   description: site.description,
   url: siteUrl,
+  author: { '@type': 'Organization', name: site.company, url: site.companyUrl },
   offers: {
     '@type': 'AggregateOffer',
     lowPrice: '0',

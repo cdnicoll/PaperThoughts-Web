@@ -1,6 +1,6 @@
 # Privacy
 
-Paper Thoughts stores your journals in your own iCloud account. I have no servers, no accounts, and no way to read anything you write.
+Paper Thoughts is made by [Quest and Query](https://questandquery.ca), my one-person company in Canada. It stores your journals in your own iCloud account. I have no servers, no accounts, and no way to read anything you write.
 
 ## What I collect
 
@@ -26,7 +26,7 @@ If you send feedback through the form on the support page, I store the message y
 
 ## Changes
 
-If this policy ever changes, the change will be dated here. This version: July 11, 2026.
+If this policy ever changes, the change will be dated here. This version: October 23, 2026, which named Quest and Query as the company behind the app. Nothing about what is collected changed.
 
 ## Contact
 
