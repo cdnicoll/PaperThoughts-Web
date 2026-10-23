@@ -69,12 +69,20 @@ export const photos = {
 };
 
 export const gallery = {
+  // Screens cropped from the 2026-10-19 App Store composites
+  // (AppStoreReadiness/screenshots/cpp/) plus two from the July batch.
   shots: [
     {
-      img: 'gallery-location.png',
+      img: 'gallery-search.png',
       device: 'ipad',
-      caption: 'A place with one tap, or drop the pin yourself.',
-      alt: 'The location picker: a map of Kamloops with a dropped pin over a garden entry',
+      caption: 'Search your handwriting, on iOS 27.',
+      alt: 'The entries feed filtered by the word “rain”, listing handwritten entries that contain it',
+    },
+    {
+      img: 'gallery-highlight.png',
+      device: 'ipad',
+      caption: 'Open a result and it scrolls to the words.',
+      alt: 'A handwritten entry with the matched words washed in a soft highlight',
     },
     {
       img: 'gallery-details.png',
@@ -89,10 +97,16 @@ export const gallery = {
       alt: 'A hiking entry written in white ink on dark paper, with three photos',
     },
     {
-      img: 'gallery-stats.png',
+      img: 'gallery-insights.png',
       device: 'ipad',
-      caption: 'The days you wrote, and the places you wrote from.',
-      alt: 'The insights screen: entry counts, a year of writing days, a calendar, and places',
+      caption: 'The days you wrote, the places you wrote from, and every word counted.',
+      alt: 'The insights screen: a year of writing days, a map of places, a calendar, and a count of handwritten words',
+    },
+    {
+      img: 'gallery-export.png',
+      device: 'ipad',
+      caption: 'Out anytime, as PDF or Markdown.',
+      alt: 'The entry menu open over the feed, with Export PDF, Export Markdown, and Export Note File',
     },
   ],
 };
@@ -139,6 +153,7 @@ export const features = {
         { name: 'Pages that grow', line: 'Write past the bottom and the page keeps going.' },
         { name: 'Paper styles', line: 'Blank, lined, grid, or dots, in three sizes.' },
         { name: 'Paper colours', line: 'Nine colours, including auto light and dark.' },
+        { name: 'Ink colours', line: 'Pick your ink from a row of swatches. Pen and pencil share it.' },
         { name: 'Journaling prompts', line: "A question to drop onto the page and answer in ink, for blank-page days." },
         { name: 'Typed entries', line: 'Serif type on the same paper, for keyboard days.' },
         { name: 'Dark mode', line: 'Your ink re-renders for dark paper.' },
@@ -151,6 +166,7 @@ export const features = {
         { name: 'Photo placeholders', line: 'Drop an empty frame now, add the picture tonight.' },
         { name: 'Location, one tap', line: 'Real place names, or drop the pin yourself.' },
         { name: 'State of mind', line: 'How the day felt, if you want it. Saved privately to Apple Health.' },
+        { name: 'Daily reminder', line: 'An optional nudge to write, at a time you choose. Never a streak.' },
         { name: 'Works offline', line: 'Places and sync catch up when you are back.' },
       ],
     },
@@ -159,6 +175,7 @@ export const features = {
       rows: [
         { name: 'Multiple journals', line: 'Six muted covers, each with its own paper.' },
         { name: 'Tags', line: 'Simple labels that filter across every journal.' },
+        { name: 'Handwriting search', line: 'Find the words you wrote by hand. On iOS 27, read on your iPad.' },
         { name: 'Bookmarks', line: 'A whole entry, or a single handwritten passage.' },
         { name: 'A look back', line: 'Calendars of writing days and places. Never scores.' },
         { name: 'Home Screen widgets', line: 'Writing days and places, at a glance.' },
@@ -170,7 +187,7 @@ export const features = {
       rows: [
         { name: 'iCloud sync', line: 'Your iCloud, across your devices. No accounts of mine.' },
         { name: 'Face ID lock', line: 'The journal locks like a diary.' },
-        { name: 'PDF and portable exports', line: 'Entries or whole journals, out anytime.' },
+        { name: 'PDF, Markdown, and portable exports', line: 'Entries or whole journals, out anytime.' },
         { name: 'iPhone companion', line: 'Read anywhere, and jot a typed thought.' },
       ],
     },
@@ -198,11 +215,11 @@ export const faq = {
     },
     {
       q: 'Can I get my writing out?',
-      a: "Anytime. Export a single entry or a whole journal as a PDF, or as a portable file you can keep or move elsewhere. It's your writing, so it's never trapped in the app.",
+      a: "Anytime. Export a single entry or a whole journal as a PDF, as Markdown, or as a portable file you can keep or move elsewhere. It's your writing, so it's never trapped in the app.",
     },
     {
       q: 'Is there handwriting search?',
-      a: "Not yet. You can filter by journal, place, tag, or date today. Searching the handwriting itself is coming once iPadOS supports it properly, instead of shipping something half-baked.",
+      a: "Yes, on iOS 27. Your handwriting is read on your iPad by Apple's own recognizer, so every word you wrote by hand is a search away. Open a result and it scrolls to the words. On earlier versions of iPadOS, search covers titles, tags, and typed pages, and you can still filter by journal, place, tag, or date.",
     },
   ],
 };
@@ -283,25 +300,25 @@ export const roadmap = {
           line: 'Draw a rough line, box, or circle and hold it, and it snaps into a clean shape.',
         },
         {
-          name: 'Gentle reminders',
-          line: 'An optional nudge to write, on your own schedule. Never a streak.',
-        },
-        {
           name: 'Start from a suggestion',
           line: "Start an entry from the day's moments, using Apple's private on-device Journaling Suggestions.",
         },
       ],
     },
     {
-      title: 'Exploring',
+      title: 'Just shipped',
       items: [
         {
           name: 'Handwriting search',
-          line: 'Finding words inside your ink, once iPadOS supports it properly.',
+          line: "Find the words you wrote by hand. iOS 27 only, since it uses Apple's on-device recognizer.",
         },
         {
           name: 'Markdown export',
           line: 'One more way to get your writing out, alongside PDF and journal files.',
+        },
+        {
+          name: 'Daily reminder',
+          line: 'An optional nudge to write, at a time you choose. Never a streak.',
         },
       ],
     },
